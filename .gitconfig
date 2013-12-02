@@ -1,0 +1,29 @@
+[user]
+	name = Nick Pafundi
+	email = nick@cloversites.com
+[diff]
+	tool = opendiff
+[merge]
+	tool = opendiff
+[alias]
+	co = checkout
+	ci = commit
+	rb = rebase
+	st = status
+	lg = log
+	logp = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+	# Rebase your commits on top of upstream commits from origin (avoids many ugly merge commits)
+	#pr = "!pull-rebase() { git pull --rebase $1 $2 }; pull-rebase"
+	po = pull --rebase origin master
+
+	# View the SHA, description, and history graph of the latest 20 commits
+	lp = log --pretty=oneline -n 20 --graph
+	
+	# Undo a `git push`
+	undopush = push -f origin HEAD^:master
+
+[color]
+	ui = true
+[mergetool]
+	keppBackup = false
