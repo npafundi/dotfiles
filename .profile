@@ -22,3 +22,5 @@ PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\W\[\033[31m\]$(__git_ps1)\[\033[
 
 export CLICOLOR=1
 export PATH="/usr/local/bin:$PATH:~/bin"
+
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
