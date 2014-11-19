@@ -1,0 +1,20 @@
+{
+	"installed_packages":
+	[
+		"Better CoffeeScript",
+		"eco",
+		"EditorConfig",
+		"Git",
+		"GitGutter",
+		"Github Tools",
+		"RubyTest",
+		"SCSS",
+		"Solarized Color Scheme",
+		"SublimeERB",
+		"SublimeLinter",
+		"SublimeLinter-annotations",
+		"SublimeLinter-csslint",
+		"Theme - Soda",
+		"TrailingSpaces"
+	]
+}
