@@ -1,0 +1,53 @@
+[user]
+	name = Nick Pafundi
+	email = nick@cloversites.com
+[diff]
+	tool = Kaleidoscope
+[merge]
+	tool = Kaleidoscope
+[alias]
+	co = checkout
+	ci = commit
+	rb = rebase
+	st = status
+	lg = log
+	logp = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+	# Rebase your commits on top of upstream commits from origin (avoids many ugly merge commits)
+	#pr = "!pull-rebase() { git pull --rebase $1 $2 }; pull-rebase"
+	po = pull --rebase origin master
+
+	# View the SHA, description, and history graph of the latest 20 commits
+	lp = log --pretty=oneline -n 20 --graph
+	
+	# Undo a `git push`
+	undopush = push -f origin HEAD^:master
+
+[color]
+	ui = true
+[mergetool]
+	keepBackup = false
+	prompt = false
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[merge "bundler"]
+	name = Resolves Gemfile.lock merge conflicts by running `bundle install`
+	driver = echo Gemfile.lock merge conflict, running bundle install && bundle install --quiet
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/nick/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

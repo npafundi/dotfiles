@@ -1,0 +1,46 @@
+alias ll="ls -la"
+
+alias s="subl"
+
+alias psd="~/code/scripts/copy-designs.sh"
+
+alias gco='git co'
+alias gci='git ci'
+alias grb='git rb'
+
+alias customers='ssh nick@customers'
+alias donations='ssh nick@donations'
+alias devdonations='ssh nick@devdonations'
+alias dbdonations='ssh nick@dbdonations'
+alias mini='ssh DesignAndDevelopment@Designs-Mac-mini.local'
+
+# Alias to generate random gradient on tint
+alias tint='curl --connect-timeout 10 --max-time 10 http://tint.cloversites.com/api/create_random_gradient >/dev/null 2>&1'
+
+# alias for 'count lines of code'
+alias cloc='~/code/scripts/cloc-1.60.pl'
+
+# alias to make pdf of API UML
+function erdapi() {
+  cd ~/Projects/Clover/CS3/API
+  rake erd filetype=dot inheritance=true
+  dot -Tpdf erd.dot > ~/Desktop/api.pdf
+}
+
+# brew install git
+# brew install bash-completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=true
+PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\W\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+
+export CLICOLOR=1
+export PATH="/usr/local/bin:$PATH:~/bin"
+
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
