@@ -23,10 +23,10 @@ open_apps() {
   open https://evernote.com/download/
   echo '1Password:'
   open https://agilebits.com/onepassword
-  echo 'Better Touch Tool:'
-  http://bettertouchtool.net/BetterTouchTool.zip
-  echo 'Spotify:'
-  https://www.spotify.com/us/download/mac/
+  echo 'Better Touch Tool'
+  open http://bettertouchtool.net/BetterTouchTool.zip
+  echo 'Spotify'
+  open https://www.spotify.com/us/download/mac/
 }
 
 echo 'Should I give you links for system applications (e.g. Chrome, ST3, etc)?'
