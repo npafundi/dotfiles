@@ -39,6 +39,11 @@ PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\W\[\033[31m\]$(__git_ps1)\[\033[
 export CLICOLOR=1
 export PATH="/usr/local/bin:$PATH:~/bin"
 
+# includes android path.  Saved from macbook air .profile 11/19/14
+# export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/smlnj-110.72/bin:/Applications/android-sdk-mac_86/tools:/Applications/android-sdk-mac_86/platform-tools:~/bin:$PATH
+# export CLASSPATH=/Applications/ANTLRWorks.app/Contents/Resources/Java/antlrworks.jar:.
+
+
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 # rbenv
