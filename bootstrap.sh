@@ -83,6 +83,7 @@ echo 'Symlinking config files...'
   source 'bin/symlink-dotfiles.sh'
 
 
+echo
 echo 'Setup script complete!'
 echo
 echo "You'll probably want to do a few more things to complete your system setup"
