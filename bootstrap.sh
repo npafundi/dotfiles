@@ -5,26 +5,47 @@
 # Thank you to Greg Losie github.com/glosie for the ideas.  This repo is a
 # modified version of Greg's dotfiles repo at https://github.com/glosie/dotfiles
 
+# We need to sleep for a fraction of a second to let the requests go through.
+# We'll receive load errors if we open too many URLs too quickly
 open_apps() {
   echo 'Install apps:'
-  echo 'Dropbox:'
+  
+  echo 'Dropbox'
   open https://www.dropbox.com
-  echo 'Chrome:'
+  sleep 0.1
+  
+  echo 'Chrome'
   open https://www.google.com/intl/en/chrome/browser/
-  echo 'Firefox:'
+  sleep 0.1
+  
+  echo 'Firefox'
   open http://www.mozilla.org/en-US/firefox/new/
-  echo 'iTerm2:'
+  sleep 0.1
+  
+  echo 'iTerm2'
   open http://www.iterm2.com/#/section/downloads
+  sleep 0.1
+  
   echo 'Sublime Text 3'
   open http://www.sublimetext.com/3
-  echo 'Quicksilver:'
+  sleep 0.1
+  
+  echo 'Quicksilver'
   open http://qsapp.com/download.php
-  echo 'Evernote:'
+  sleep 0.1
+  
+  echo 'Evernote'
   open https://evernote.com/download/
-  echo '1Password:'
+  sleep 0.1
+  
+  echo '1Password'
   open https://agilebits.com/onepassword
+  sleep 0.1
+  
   echo 'Better Touch Tool'
   open http://bettertouchtool.net/BetterTouchTool.zip
+  sleep 0.1
+  
   echo 'Spotify'
   open https://www.spotify.com/us/download/mac/
 }
