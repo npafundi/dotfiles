@@ -54,7 +54,7 @@ fi
 
 # Change a few prefs in OS X
 echo 'Tweaking OS X...'
-  source 'bin/osx.sh'
+  source 'bin/configure-osx.sh'
 
 
 # Symlink all dotfiles to their appropriate locations
