@@ -37,6 +37,7 @@ on which most of these are based.
 ###todo
 There are a handful of things I'd still like to put in when I have a chance (not too high on my priorities, unfortunately)
 * Create an installation script that will checkout/download this repo and run everything as necessary (checkout via curl)
+* Add xcode tools installation, if the tools aren't already there
 * Include more applications in the application list, and use command line to download/install (rather than popping open browser tabs)
 * Little things...
 
