@@ -30,7 +30,7 @@ I take no responsibility for issues that arise due to use or misuse of anything 
 
 
 ###Thanks
-Thanks to (Greg Losie)[https://github.com/glosie] and his [dotfiles repo](https://github.com/glosie/dotfiles),
+Thanks to [Greg Losie](https://github.com/glosie) and his [dotfiles repo](https://github.com/glosie/dotfiles),
 on which most of these are based.
 
 
