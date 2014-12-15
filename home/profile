@@ -8,6 +8,8 @@ alias gco='git co'
 alias gci='git ci'
 alias grb='git rb'
 
+alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
+
 alias customers='ssh nick@customers'
 alias donations='ssh nick@donations'
 alias devdonations='ssh nick@devdonations'
