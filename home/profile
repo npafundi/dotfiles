@@ -1,32 +1,40 @@
+# Command shortcut aliases
 alias ll="ls -la"
 
+# Application aliases
 alias s="subl"
+alias a="atom"
 
-alias psd="~/code/scripts/copy-designs.sh"
-
+# Git aliases
 alias gco='git co'
 alias gci='git ci'
 alias grb='git rb'
 
+# Script aliases
+alias psd="~/code/scripts/copy-designs.sh"
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
 
+# Lazy connection aliases
 alias customers='ssh nick@customers'
 alias donations='ssh nick@donations'
 alias devdonations='ssh nick@devdonations'
 alias dbdonations='ssh nick@dbdonations'
 alias mini='ssh DesignAndDevelopment@Designs-Mac-mini.local'
 
-# Alias to generate random gradient on tint
-alias tint='curl --connect-timeout 10 --max-time 10 http://tint.cloversites.com/api/create_random_gradient >/dev/null 2>&1'
-
 # alias for 'count lines of code'
 alias cloc='~/code/scripts/cloc-1.60.pl'
+
+# run a script to check if we have any current Clover Sites 3 releases
+alias rel='~/Projects/Clover/CS3/Team/check_for_releases.sh'
+
+# Alias to easily restart powder
+alias powpow="powder down && powder up"
 
 # alias to make pdf of API UML
 function erdapi() {
   last_pwd=$(pwd)
   cd ~/Projects/Clover/CS3/API
-  rake erd filename=~/Desktop/api filetype=pdf inheritance=true
+  rake erd filename=~/Desktop/api filetype=pdf inheritance=true indirect=true polymorphism=true
   cd $last_pwd
 }
 
@@ -39,11 +47,16 @@ fi
 GIT_PS1_SHOWDIRTYSTATE=true
 PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\W\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
 
+# Terminal setup
 export CLICOLOR=1
 export PATH="/usr/local/bin:$PATH:~/bin"
-
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
-# rbenv
+# rbenv (Ruby)
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# virtualenv and virtualenvwrapper (Python)
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects
+source /usr/local/bin/virtualenvwrapper.sh
