@@ -11,32 +11,10 @@ alias gci='git ci'
 alias grb='git rb'
 
 # Script aliases
-alias psd="~/code/scripts/copy-designs.sh"
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
-
-# Lazy connection aliases
-alias customers='ssh nick@customers'
-alias donations='ssh nick@donations'
-alias devdonations='ssh nick@devdonations'
-alias dbdonations='ssh nick@dbdonations'
-alias mini='ssh DesignAndDevelopment@Designs-Mac-mini.local'
 
 # alias for 'count lines of code'
 alias cloc='~/code/scripts/cloc-1.60.pl'
-
-# run a script to check if we have any current Clover Sites 3 releases
-alias rel='~/Projects/Clover/CS3/Team/check_for_releases.sh'
-
-# Alias to easily restart powder
-alias powpow="powder down && powder up"
-
-# alias to make pdf of API UML
-function erdapi() {
-  last_pwd=$(pwd)
-  cd ~/Projects/Clover/CS3/API
-  rake erd filename=~/Desktop/api filetype=pdf inheritance=true indirect=true polymorphism=true
-  cd $last_pwd
-}
 
 # brew install git
 # brew install bash-completion
@@ -56,7 +34,3 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# virtualenv and virtualenvwrapper (Python)
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Projects
-source /usr/local/bin/virtualenvwrapper.sh
