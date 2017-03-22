@@ -27,4 +27,4 @@ for location in home/*; do
 done
 
 # Link up all sublimetext3 settings and prefs, and set up for package install
-link "$dotfiles/sublime3/" "$HOME/Library/Application Support/Sublime Text 3/Packages/User"
+# link "$dotfiles/sublime3/" "$HOME/Library/Application Support/Sublime Text 3/Packages/User"
