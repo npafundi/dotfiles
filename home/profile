@@ -1,21 +1,6 @@
 # Command shortcut aliases
 alias ll="ls -la"
 
-# Application aliases
-alias s="subl"
-alias a="atom"
-
-# Git aliases
-alias gco='git co'
-alias gci='git ci'
-alias grb='git rb'
-
-# Script aliases
-alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
-
-# alias for 'count lines of code'
-alias cloc='~/code/scripts/cloc-1.60.pl'
-
 # brew install git
 # brew install bash-completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
